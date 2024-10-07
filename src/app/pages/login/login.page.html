@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Iniciar sesión</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-label>Nombre</ion-label>
+      <ion-item>
+        <ion-input type="text" placeholder="Ingrese nombre" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-item>
+        <ion-input type="password" placeholder="Ingrese contraseña" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" (click)="validar()">Entrar</ion-button>
+
+      <div lines="none">
+        <ion-text>
+          <a href="/codigo" class="link-recuperar">Recuperar Contraseña</a>
+        </ion-text>        
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

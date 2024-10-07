@@ -1,0 +1,28 @@
+ion-card {
+    --background: #012C56;
+    color: #fff;
+  }
+  
+  ion-button[color="primary"] {
+    --background: #6c757d; 
+    --color: #fff; 
+  }
+  
+  ion-button[color="secondary"] {
+    --background: #6c757d;
+    --color: #fff; 
+  }
+  
+  .contador {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  #contador {
+    font-size: 14px;
+    color: #888;
+  }
+
+  ion-card-title {
+    color: white;
+  }

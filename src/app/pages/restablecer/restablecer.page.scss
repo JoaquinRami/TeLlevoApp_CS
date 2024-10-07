@@ -1,0 +1,25 @@
+.custom-card {
+  background-color: #012C56;
+  color: white;
+}
+
+.custom-title {
+  color: white;
+}
+
+.custom-label {
+  color: white;
+}
+
+.custom-button {
+  --color: gray;
+  --color-activated: gray;
+  --color-focused: gray;
+  --color-hover: gray;
+  --color-disabled: gray;
+  color: white;
+}
+
+ion-card-title {
+  color: white;
+}

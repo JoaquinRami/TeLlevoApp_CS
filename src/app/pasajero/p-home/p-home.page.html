@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="title-container">
+    <ion-label class="title-text">Home</ion-label>
+  </div>
+
+  <div class="button-container">
+
+    <div>
+      <ion-button class="circular-button planificar-button" shape="round" (click)="buscarviaje()">
+        <img src="../../../assets/icon/auto.jpg" slot="icon-only" class="button-icon" />
+      </ion-button>
+      <ion-label class="button-label">Buscar Viaje</ion-label>
+    </div>
+
+    <div>
+      <ion-button class="circular-button" shape="round">
+        <img src="../../../assets/icon/historial.png" slot="icon-only" class="button-icon" />
+      </ion-button>
+      <ion-label class="button-label">Mis Viajes</ion-label>
+    </div>
+
+
+    <div>
+      <ion-button class="circular-button" shape="round" (click)="cancelar2()" >
+      <ion-icon name="close" slot="icon-only" class="button-icon"></ion-icon>
+      </ion-button>
+      <ion-label ion-label class="button-label">Cancelar Viaje</ion-label>
+    </div>
+  </div>
+</ion-content>

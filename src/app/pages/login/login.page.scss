@@ -1,0 +1,36 @@
+ion-card {
+  background-color: #012C56;
+  color: #ffffff; 
+  padding: 20px;
+  margin: 20px;
+}
+
+ion-item {
+  margin-bottom: 15px;
+}
+
+.btn-entrar {
+  background-color: #808080;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.texto-restablecer {
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.texto-restablecer:hover {
+  text-decoration: underline;
+}
+
+.link-recuperar {
+  color: white; 
+  text-decoration: none;  
+}
+
+ion-card-title {
+  color: white;
+}
+

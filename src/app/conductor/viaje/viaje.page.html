@@ -1,0 +1,34 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div class="map-container">
+    <img src="../../../assets/icon/mapa.jpg" alt="Map" class="map-image">
+  </div>
+
+
+  <div class="button-row">
+    <ion-button>Origen</ion-button>
+  </div>
+  <div class="button-row">
+    <ion-button>Destino</ion-button>
+  </div>
+
+
+  <div class="button-row">
+    <ion-button>Tarifa:$$$$</ion-button>
+    <ion-button>Capacidad:1/4</ion-button>
+  </div>
+
+
+  <ion-button (click)="QR()"><img src="../../../assets/icon/qr.png" alt="QR Code" ></ion-button>
+
+  <div class="button-container">
+    <ion-button expand="block" class="start-button">Iniciar</ion-button>
+    <ion-button class="back-button" expand="block" color="light" (click)="goBack()">Volver</ion-button>
+  </div>
+
+
+</ion-content>
+
+
+
+

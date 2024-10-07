@@ -1,0 +1,24 @@
+.error-page {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .error-container {
+    max-width: 400px;
+  }
+  
+  h1 {
+    font-size: 6rem;
+    color: #ff4040;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: black;
+  }
+  

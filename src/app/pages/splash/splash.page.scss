@@ -1,0 +1,25 @@
+.card {
+    background-color: #012C56;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  
+  .title {
+    color: #FFC700;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .spinner {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #FFC700;
+    bottom: 100px; /* Ajusta la distancia del spinner desde el fondo de la pantalla */
+  }

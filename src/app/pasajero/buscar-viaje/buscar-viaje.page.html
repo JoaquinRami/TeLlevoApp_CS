@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="title-container">
+    <ion-label class="title-text">Buscar viaje</ion-label>
+  </div>
+
+  <ion-list>
+    <ion-item (click)="viaje()">
+      <ion-avatar slot="start">
+        <img src="../../../assets/icon/usuario.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2>viaje 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item >
+      <ion-avatar slot="start">
+        <img src="../../../assets/icon/usuario.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2>viaje 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item >
+      <ion-avatar slot="start">
+        <img src="../../../assets/icon/usuario.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2>viaje 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <div class="button-container">
+    <ion-button class="back-button" expand="block" color="light" (click)="goBack()">Volver</ion-button>
+  </div>
+
+</ion-content>
