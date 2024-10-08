@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,21 +12,26 @@ import { AlertController } from '@ionic/angular';
 export class LoginPage implements OnInit {
   nombre: string = '';
   password: string = '';
+  storedPassword: string | null = '';
+  
 
   constructor(
     private navCtrl: NavController,
-    private AlertController: AlertController
+    private AlertController: AlertController,
+    private router: Router
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.storedPassword = localStorage.getItem('password');
+  }
 
   validar() {
-    if (this.nombre === 'conductor' && this.password === '123') {
+    if (this.nombre === 'conductor' && this.password === this.storedPassword) {
       console.log('Bienvenido, conductor');
       localStorage.setItem('usuario', this.nombre);
 
       this.navCtrl.navigateForward(['/c-home']);
-    } else if (this.nombre === 'pasajero' && this.password === '123') {
+    } else if (this.nombre === 'pasajero' && this.password === this.storedPassword) {
       console.log('Bienvenido, Pasajero');
       localStorage.setItem('usuario', this.nombre);
 

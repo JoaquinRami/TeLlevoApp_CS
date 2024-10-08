@@ -10,9 +10,13 @@ import { NavController } from '@ionic/angular';
 })
 export class PHomePage implements OnInit {
 
+  usuario:string=""
+  
   constructor(private alertController: AlertController,private navCtrl: NavController) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    var x=localStorage.getItem("usuario")
+    this.usuario=x ?? ''
   }
 
   async cancelar2() {
@@ -47,4 +51,7 @@ export class PHomePage implements OnInit {
     this.navCtrl.navigateForward('/buscar-viaje');
   }
 
+  misviajes() {
+    this.navCtrl.navigateForward('/p-mis-viajes');
+  }
 }

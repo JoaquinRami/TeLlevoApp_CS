@@ -1,7 +1,8 @@
 <ion-content [fullscreen]="true" class="ion-padding">
   <div class="title-container">
-    <ion-label class="title-text">Home</ion-label>
+    <ion-label class="title-text">Bienvenido {{usuario}}</ion-label>
   </div>
+
 
   <div class="button-container">
 
@@ -13,7 +14,7 @@
     </div>
 
     <div>
-      <ion-button class="circular-button" shape="round">
+      <ion-button class="circular-button" shape="round" (click)="misviajes()">
         <img src="../../../assets/icon/historial.png" slot="icon-only" class="button-icon" />
       </ion-button>
       <ion-label class="button-label">Mis Viajes</ion-label>

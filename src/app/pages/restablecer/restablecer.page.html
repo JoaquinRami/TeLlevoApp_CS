@@ -7,15 +7,15 @@
     <ion-card-content>
       <ion-label class="custom-label" position="floating">Nueva contraseña</ion-label>
       <ion-item>
-        <ion-input type="password" placeholder="Ingrese nueva contraseña"></ion-input>
+        <ion-input type="password" name="newPassword" placeholder="Ingrese nueva contraseña" [(ngModel)]="newPassword" required></ion-input>
       </ion-item>
 
       <ion-label class="custom-label" position="floating">Repetir contraseña</ion-label>
       <ion-item>
-        <ion-input type="password" placeholder="Repita la contraseña"></ion-input>
+        <ion-input type="password" name="confirmPassword" placeholder="Repita la contraseña" [(ngModel)]="confirmPassword" required></ion-input>
       </ion-item>
 
-      <ion-button expand="full" class="custom-button">Cambiar contraseña</ion-button>
+      <ion-button expand="full" type="submit" class="custom-button" (click)="changePassword()">Cambiar contraseña</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

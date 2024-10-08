@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-p-mis-viajes',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PMisViajesPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
+  }
+
+  goBack() {
+    this.navCtrl.navigateForward('/p-home');
   }
 
 }

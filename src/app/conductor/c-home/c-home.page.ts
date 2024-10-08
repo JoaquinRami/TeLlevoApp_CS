@@ -9,9 +9,13 @@ import { AlertController } from '@ionic/angular';
 })
 export class CHomePage implements OnInit {
 
+  usuario:string=""
+  
   constructor(private navCtrl: NavController,private alertController: AlertController) { } 
-
-  ngOnInit() {
+  
+  ngOnInit(): void {
+    var x=localStorage.getItem("usuario")
+    this.usuario=x ?? ''
   }
 
   async cancelar() {
@@ -45,9 +49,12 @@ export class CHomePage implements OnInit {
     this.navCtrl.navigateForward('/planificar-viaje');
   }
 
-  iniciarviaje() {
-    
+  iniciarviaje() {  
     this.navCtrl.navigateForward('/viaje');
+  }
+
+  misviajes() {
+    this.navCtrl.navigateForward('/c-mis-viajes');
   }
 
 }
