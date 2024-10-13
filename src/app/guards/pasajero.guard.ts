@@ -9,6 +9,6 @@ export const pasajeroGuard: CanActivateFn = (route, state) => {
     return true;
   }
 
-  router.navigate(["/p-home"])
+  router.navigate(["/c-home"])
   return false;
 };
