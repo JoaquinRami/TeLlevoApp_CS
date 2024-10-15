@@ -9,6 +9,6 @@ export const conductorGuard: CanActivateFn = (route, state) => {
     return true;
   }
 
-  router.navigate(["/c-home"])
+  router.navigate(["/p-home"])
   return false;
 };
