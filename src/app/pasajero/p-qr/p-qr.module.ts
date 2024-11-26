@@ -8,8 +8,11 @@ import { PQrPageRoutingModule } from './p-qr-routing.module';
 
 import { PQrPage } from './p-qr.page';
 
+import { QrCodeModule } from 'ng-qrcode'; /*crear qr*/
+
 @NgModule({
   imports: [
+    QrCodeModule,
     CommonModule,
     FormsModule,
     IonicModule,

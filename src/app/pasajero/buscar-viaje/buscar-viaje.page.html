@@ -3,40 +3,30 @@
     <ion-label class="title-text">Buscar viaje</ion-label>
   </div>
 
-  <ion-list>
-    <ion-item (click)="viaje()">
-      <ion-avatar slot="start">
-        <img src="../../../assets/icon/usuario.png" />
-      </ion-avatar>
-      <ion-label>
-        <h2>viaje 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur.</p>
-      </ion-label>
-    </ion-item>
 
-    <ion-item (click)="viaje()">
-      <ion-avatar slot="start">
-        <img src="../../../assets/icon/usuario.png" />
-      </ion-avatar>
-      <ion-label>
-        <h2>viaje 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur.</p>
-      </ion-label>
-    </ion-item>
-
-    <ion-item (click)="viaje()">
-      <ion-avatar slot="start">
-        <img src="../../../assets/icon/usuario.png" />
-      </ion-avatar>
-      <ion-label>
-        <h2>viaje 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur.</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <ul class="list">
+    <li class="list-item" *ngFor="let viaje of viajes"  >
+      <div class="list-content" >
+        <div class="profile">
+          <ion-button color="light" (click)="irviaje(viaje.conductor)">+</ion-button>
+        </div>
+        <div class="details">
+          <p class="name">{{viaje.conductor}}</p>
+          <p class="conductor">{{viaje.destino}}  </p>
+        </div>
+        
+        <div class="amount-date">
+          <p class="tariff">Tarifa</p>
+          <p class="amount">${{viaje.tarifa}}</p>
+          <p class="date">{{viaje.fecha}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
 
 
   <div class="button-container">
+    <ion-button  expand="block" color="light" (click)="obtenerViajes()">Actualizar</ion-button>
     <ion-button class="back-button" expand="block" color="light" (click)="goBack()">Volver</ion-button>
   </div>
 

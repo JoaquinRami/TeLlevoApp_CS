@@ -7,10 +7,12 @@ import { IonicModule } from '@ionic/angular';
 import { CHomePageRoutingModule } from './c-home-routing.module';
 
 import { CHomePage } from './c-home.page';
+import { ComponenteModule } from 'src/app/componentes/componente.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    ComponenteModule,
     FormsModule,
     IonicModule,
     CHomePageRoutingModule

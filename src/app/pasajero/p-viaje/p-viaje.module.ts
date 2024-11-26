@@ -7,10 +7,12 @@ import { IonicModule } from '@ionic/angular';
 import { PViajePageRoutingModule } from './p-viaje-routing.module';
 
 import { PViajePage } from './p-viaje.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     FormsModule,
     IonicModule,
     PViajePageRoutingModule

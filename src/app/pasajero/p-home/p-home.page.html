@@ -19,12 +19,21 @@
       <ion-label class="button-label">Mis Viajes</ion-label>
     </div>
 
+    <div>
+      <ion-button class="circular-button" shape="round" (click)="viajeact()">
+        <img src="../../../assets/icon/iniciar.png" slot="icon-only" class="button-icon" />
+      </ion-button>
+      <ion-label class="button-label">Viaje Activo</ion-label>
+    </div>
 
     <div>
-      <ion-button class="circular-button" shape="round" (click)="cancelar2()" >
+      <ion-button class="circular-button" shape="round" (click)="cancelar()" >
       <ion-icon name="close" slot="icon-only" class="button-icon"></ion-icon>
       </ion-button>
-      <ion-label ion-label class="button-label">Cancelar Viaje</ion-label>
+      <ion-label class="button-label">Cancelar Viaje</ion-label>
     </div>
+
+    <app-cerrar-sesion/>
+
   </div>
 </ion-content>

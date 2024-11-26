@@ -4,85 +4,26 @@
   </div>
 
   <ul class="list">
-    <li class="list-item">
+    <li class="list-item" *ngFor="let viaje of viajes">
       <div class="list-content">
         <div class="profile">
-          <img src="/../../../assets/icon/en_progreso.png" alt="En progreso">
+          <img [src]="imagen(viaje)" alt="Estado del viaje">
         </div>
         <div class="details">
-          <p class="passengers">Pasajeros: 1</p>
+          <p class="passengers">Pasajeros:{{ viaje.pasajeros }}</p>
+          <p class="conductor">Destino:{{ viaje.destino }}</p>
         </div>
         <div class="amount-date">
           <p class="total-gain">Ganancia total</p>
-          <p class="amount">$2600</p>
-          <p class="date">2024-09-10</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="list-content">
-        <div class="profile">
-          <img src="/../../../assets/icon/check.png" alt="Check">
-        </div>
-        <div class="details">
-          <p class="passengers">Pasajeros: 2</p>
-        </div>
-        <div class="amount-date">
-          <p class="total-gain">Ganancia total</p>
-          <p class="amount">$4467</p>
-          <p class="date">2024-08-12</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="list-content">
-        <div class="profile">
-          <img src="/../../../assets/icon/cancelado.png" alt="Cancelado">
-        </div>
-        <div class="details">
-          <p class="passengers">Pasajeros: 3</p>
-        </div>
-        <div class="amount-date">
-          <p class="total-gain">Ganancia total</p>
-          <p class="amount">$5700</p>
-          <p class="date">2024-07-05</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="list-content">
-        <div class="profile">
-          <img src="/../../../assets/icon/check.png" alt="Check">
-        </div>
-        <div class="details">
-          <p class="passengers">Pasajeros: 4</p>
-        </div>
-        <div class="amount-date">
-          <p class="total-gain">Ganancia total</p>
-          <p class="amount">$10367</p>
-          <p class="date">2024-06-22</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="list-content">
-        <div class="profile">
-          <img src="/../../../assets/icon/check.png" alt="Check">
-        </div>
-        <div class="details">
-          <p class="passengers">Pasajeros: 2</p>
-        </div>
-        <div class="amount-date">
-          <p class="total-gain">Ganancia total</p>
-          <p class="amount">$4670</p>
-          <p class="date">2024-05-30</p>
+          <p class="amount">${{ viaje.tarifa * viaje.pasajeros }}</p>
+          <p class="date">{{ viaje.fecha }}</p>
         </div>
       </div>
     </li>
   </ul>
 
   <div class="button-container">
-    <ion-button class="back-button" expand="block" color="light" (click)="goBack()">Volver</ion-button>
+    <ion-button  expand="block" color="light" (click)="obtenerViajes()">Actualizar</ion-button>
+    <ion-button  expand="block" color="light" (click)="goBack()">Volver</ion-button>
   </div>
-
 </ion-content>

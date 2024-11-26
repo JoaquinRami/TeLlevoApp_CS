@@ -1,17 +1,21 @@
-<ion-content [fullscreen]="true" class="ion-padding">
-  <div class="title-container">
-    <ion-label class="title-text">QR</ion-label>
-  </div>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Scaner</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-
-  <div class="button-row">
-    <img src="../../../assets/icon/qr-scan.png" alt="">
-  </div>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let barcode of barcodes">
+      <ion-label position="stacked">{{ barcode.format }}</ion-label>
+      <ion-input type="text" [value]="barcode.rawValue"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="scan()" [disabled]="!isSupported">
+      <ion-icon name="scan"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   
-
-
-  <div class="qr">
-    <ion-button class="back-button" expand="block" color="light" (click)="goBack()">Volver</ion-button>
-  </div>
-
+  <ion-button class="back-button" expand="block" color="light" (click)="goBack()">Volver</ion-button>
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-codigo',
@@ -16,7 +17,7 @@ export class CodigoPage implements OnInit {
   contadorSegundos: number = 0;
   intervalo: any;
 
-  constructor(private navCtrl: NavController, private alertController: AlertController) { }
+  constructor(private firestore: AngularFirestore, private navCtrl: NavController, private alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -35,17 +36,21 @@ export class CodigoPage implements OnInit {
     }, 1000);
   }
 
+
   enviarCodigo() {
-    if (this.nombre !== 'conductor' && this.nombre !== 'pasajero') {
-      this.presentAlert('Error', 'El nombre ingresado no es válido.');
-      return;
-    }
-
-    this.codigoGenerado = Math.floor(100000 + Math.random() * 900000).toString();
-
-    this.codigo = this.codigoGenerado;
-
-    this.iniciarContador();
+    this.firestore.collection('usuarios', ref => ref.where('nombre', '==', this.nombre)).get().subscribe((querySnapshot) => {
+      
+      if (!querySnapshot.empty) {
+        localStorage.setItem('usuario', this.nombre);
+        this.codigoGenerado = Math.floor(100000 + Math.random() * 900000).toString();
+        this.codigo = this.codigoGenerado;
+  
+        this.iniciarContador();
+      } else {
+        this.presentAlert('Error', 'El nombre ingresado no es válido.');
+      }
+  
+    });
   }
 
   validarFormulario() {

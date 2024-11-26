@@ -2,6 +2,7 @@
   <div class="title-container">
     <ion-label class="title-text">Bienvenido {{usuario}}</ion-label>
   </div>
+  
 
 
   <div class="button-container">
@@ -22,7 +23,7 @@
 
     <div>
       <ion-button class="circular-button" shape="round" (click)="iniciarviaje()">
-        <img src="../../../assets/icon/historial.png" slot="icon-only" class="button-icon" />
+        <img src="../../../assets/icon/iniciar.png" slot="icon-only" class="button-icon" />
       </ion-button>
       <ion-label class="button-label">Iniciar Viaje</ion-label>
     </div>
@@ -31,8 +32,11 @@
       <ion-button class="circular-button" shape="round" (click)="cancelar()">
       <ion-icon name="close" slot="icon-only" class="button-icon"></ion-icon>
       </ion-button>
-      <ion-label ion-label class="button-label">Cancelar Viaje</ion-label>
+      <ion-label class="button-label">Cancelar Viaje</ion-label>
     </div>
+
+    <app-cerrar-sesion/>
+    
   </div>
 </ion-content>
 

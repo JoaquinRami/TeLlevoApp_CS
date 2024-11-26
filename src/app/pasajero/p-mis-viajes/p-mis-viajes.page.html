@@ -4,94 +4,28 @@
   </div>
 
   <ul class="list">
-    <li class="list-item">
+    <li class="list-item" *ngFor="let viaje of viajes">
       <div class="list-content">
         <div class="profile">
-          <img src="/../../../assets/icon/en_progreso.png" alt="En progreso">
+          <img [src]="imagen(viaje)" alt="Estado del viaje">
         </div>
         <div class="details">
-          <p class="conductor">Conductor</p>
-          <p class="name">Joaquín Ramírez</p>
-          <p class="patente">FFGG-78</p>
+          <p class="name">Destino</p>
+          <p class="conductor">{{ viaje.destino }}</p>
+          <p class="name">{{viaje.conductor}}</p>
         </div>
         <div class="amount-date">
           <p class="tariff">Tarifa</p>
-          <p class="amount">$3200</p>
-          <p class="date">2024-09-10</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="list-content">
-        <div class="profile">
-          <img src="/../../../assets/icon/check.png" alt="Check">
-        </div>
-        <div class="details">
-          <p class="conductor">Conductor</p>
-          <p class="name">William Chamorro</p>
-          <p class="patente">KKDD-45</p>
-        </div>
-        <div class="amount-date">
-          <p class="tariff">Tarifa</p>
-          <p class="amount">$3467</p>
-          <p class="date">2024-08-12</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="list-content">
-        <div class="profile">
-          <img src="/../../../assets/icon/cancelado.png" alt="Cancelado">
-        </div>
-        <div class="details">
-          <p class="conductor">Conductor</p>
-          <p class="name">Manuel Páez</p>
-          <p class="patente">ERHV-12</p>
-        </div>
-        <div class="amount-date">
-          <p class="tariff">Tarifa</p>
-          <p class="amount">$6700</p>
-          <p class="date">2024-07-05</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="list-content">
-        <div class="profile">
-          <img src="/../../../assets/icon/check.png" alt="Check">
-        </div>
-        <div class="details">
-          <p class="conductor">Conductor</p>
-          <p class="name">Tomás López</p>
-          <p class="patente">LLRT-23</p>
-        </div>
-        <div class="amount-date">
-          <p class="tariff">Tarifa</p>
-          <p class="amount">$2367</p>
-          <p class="date">2024-06-22</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="list-content">
-        <div class="profile">
-          <img src="/../../../assets/icon/check.png" alt="Check">
-        </div>
-        <div class="details">
-          <p class="conductor">Conductor</p>
-          <p class="name">Raúl Hermosilla</p>
-          <p class="patente">QERX-86</p>
-        </div>
-        <div class="amount-date">
-          <p class="tariff">Tarifa</p>
-          <p class="amount">$3670</p>
-          <p class="date">2024-05-30</p>
+          <p class="amount">${{viaje.tarifa}}</p>
+          <p class="date">{{viaje.fecha}}</p>
+          <p class="date">{{viaje.horat}}</p>
         </div>
       </div>
     </li>
   </ul>
 
 <div class="button-container">
+  <ion-button  expand="block" color="light" (click)="obtenerViajes()">Actualizar</ion-button>
   <ion-button class="back-button" expand="block" color="light" (click)="goBack()">Volver</ion-button>
 </div>
   

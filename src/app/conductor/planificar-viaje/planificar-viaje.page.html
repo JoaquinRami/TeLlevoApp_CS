@@ -4,14 +4,37 @@
   </div>
 
   <div class="form-container">
-    <ion-button class="form-button" expand="block">Origen</ion-button>
-    <ion-button class="form-button" expand="block">Destino</ion-button>
-    <ion-button class="form-button" expand="block">Capacidad</ion-button>
-    <ion-button class="form-button" expand="block">Tarifa</ion-button>
+    <ion-item class="form-button">
+      <ion-input placeholder="Origen(Subterraneo/Frente)" [(ngModel)]="origen"></ion-input>
+    </ion-item>
+
+    <ion-item class="form-button">
+      <ion-input placeholder="Destino" (ionInput)="cuandoCambie($event)" [(ngModel)]="destino"></ion-input>
+    </ion-item>
+
+    <ion-item class="form-button">
+      <ion-select (ionChange)="seleccionarDireccion($event)" placeholder="Seleccione direccion">
+        <ion-select-option [value]="dire"
+          *ngFor="let dire of arreglo_direcciones">{{dire.place_name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="form-button">
+      <ion-input placeholder="Capacidad" [(ngModel)]="capacidad" type="number"></ion-input>
+    </ion-item>
+    <ion-item class="form-button">
+      <ion-input placeholder="Tarifa" [(ngModel)]="tarifa" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item class="form-button">
+      <ion-input placeholder="Hora" [(ngModel)]="hora" type="text" readonly (click)="horaAlert()"></ion-input>
+    </ion-item>    
+
   </div>
+  
 
   <div class="button-container">
-    <ion-button class="confirm-button" expand="block">Confirmar</ion-button>
+    <ion-button class="confirm-button" expand="block" (click)="validar()" (click)="goBack()">Confirmar</ion-button>
     <ion-button class="back-button" expand="block" color="light" (click)="goBack()">Volver</ion-button>
   </div>
 </ion-content>

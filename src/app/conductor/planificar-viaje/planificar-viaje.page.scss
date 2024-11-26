@@ -1,60 +1,60 @@
-
 .title-container {
-    background-color: #002244;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .title-text {
-    color: #FFCC00;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+  background-color: #002244;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .form-button {
-    width: 200px;
-    height: 40px;
-    --background: white;
-    --color: black;
-    border: 1px solid black;
-  }
-  
+.title-text {
+  color: #FFCC00;
+  font-size: 24px;
+  font-weight: bold;
+}
 
-  .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .confirm-button {
-    background-color: black;
-    color: white;
-  }
-  
-  .back-button {
-    background-color: #d3d3d3; 
-    color: black;
-  }
-  
-  ion-button{
-    --background:#012C56;
 
-  }  
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 
-  ion-content{
-    --background: #ffffff;
-  }
-  
-  ion-label {
-    color: black;
-  }
+.form-button {
+  width: 200px;
+  height: 40px;
+  --background: white;
+  --color: black;
+  border: 1px solid black;
+  text-align: center;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.confirm-button {
+  background-color: black;
+  color: white;
+}
+
+.back-button {
+  background-color: #d3d3d3;
+  color: black;
+}
+
+ion-button {
+  --background: #012C56;
+
+}
+
+ion-content {
+  --background: #ffffff;
+}
+
+ion-label {
+  color: black;
+}
